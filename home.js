@@ -22,10 +22,11 @@
 */
 
 //CODE HERE
+let greetUser = (username) => 
+    "Welcome back, " + username;
 
-
-
-
+console.log (greetUser ("Andrew"))
+console.log (greetUser ("Logan"))
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -51,6 +52,14 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+function canWeDeliver(zipCode) {
+    if (deliveryAreaZipCodes.includes(zipCode)) {
+        return "You're in our delivery zone!"
+    } else {
+        return "Sorry, we can't deliver to that address."
+    }
+}
+console.log(canWeDeliver(85205))
 
 
 /* 
@@ -71,7 +80,14 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
-
+ function canWeDeliverTwo(zipCode) {
+     for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+         if (deliveryAreaZipCodes[i] === zipCode) {
+             return "You're in our delivery zone!"}
+             else {return "Sorry, we can't deliver to that address"}
+        }
+    }
+console.log(canWeDeliverTwo(85205))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -107,9 +123,8 @@ const deals = [
 */
 
 //CODE HERE
-
-
-
+deals = title.replace(/15%/, '10%')
+console.log(deals)
 /*
     The restaurant is going to continue its
     family deal for another month. 

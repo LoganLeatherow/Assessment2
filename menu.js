@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+let pizza ={
+name: "Cheese",
+price: 10,
+category: "entree",
+popularity: 10,
+rating: 10,
+tags: ["great","yummy","awesome"]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,8 +70,8 @@
 */
 
 //CODE HERE
-
-
+let {price} = pizza
+console.log (price)
 /*
     Fourth, and last, destructure the category
     property.
@@ -73,8 +80,8 @@
 */
 
 //CODE HERE
-
-
+let {category} = pizza
+console.log (category)
 //////////////////PROBLEM 3////////////////////
 /* 
     Create an array with about 5 objects in it.
@@ -89,6 +96,43 @@
 
 //CODE HERE
 
+    let foodArr =[
+        {
+        name: "Cheese",
+        price: 10,
+        category: "entree",
+        popularity: 10,
+        rating: 10,
+        tags: ["great","yummy","awesome"]
+        },{
+        name: "Peperoni",
+        price: 11,
+        category: "entree",
+        popularity: 8,
+        rating: 8,
+        tags: ["zesty","great","filling"]  
+        },{
+        name: "Sausage",
+        price: 11,
+        category: "entree",
+        popularity: 7,
+        rating: 9,
+        tags: ["Rich","Spicy","Hardy"]
+        },{
+        name: "Garlic Bread",
+        price: 5,
+        category: "Side",
+        popularity: 10,
+        rating: 10,
+        tags: ["Garlic","Buttery","Share"]
+        },{
+        name: "Cheese Bread",
+        price: 6,
+        category: "Side",
+        popularity: 10,
+        rating: 10,
+        tags: ["Cheesy","Fun","Share"]
+        }]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -106,9 +150,10 @@
 //CODE HERE
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
-
+const filteredFood = foodArr.filter(tagFilter => {
+    return tagFilter.tags.includes("Share")
+})
+console.log(filteredFood)
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -149,7 +194,9 @@
 */
 
 //CODE HERE
-
+function filterByProperty() {
+    
+}
 
 /*
     Invoke the `filterByProperty` function passing

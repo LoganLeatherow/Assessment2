@@ -36,7 +36,10 @@ const cart = [
 //CODE HERE
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce(tagFilter => {
+    return tagFilter.tags.includes("Share")
+})
+console.log(filteredFood)
 
 //////////////////PROBLEM 2////////////////////
 /*  
