@@ -34,13 +34,16 @@ const cart = [
 ]
 
 //CODE HERE
+// total = cart.reduce(summedPrice)
 
+// function summedPrice(total, price) {
+//   return price + num;
+// }
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
-const summedPrice = cart.reduce(tagFilter => {
-    return tagFilter.tags.includes("Share")
+const summedPrice = cart.reduce(function(previousValue, currentValue){
+    return previousValue + currentValue;
 })
-console.log(filteredFood)
-
+console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that

@@ -102,7 +102,7 @@ console.log(canWeDeliverTwo(85205))
     Read on for more instructions.
 */
 
-const deals = [
+ deals = [
     {
         title: '15% Off!', 
         desc: 'Applied to your entire order when you spend $30 or more'
@@ -123,8 +123,7 @@ const deals = [
 */
 
 //CODE HERE
-deals = title.replace(/15%/, '10%')
-console.log(deals)
+deals.replace(/\d+/,"10");
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -139,3 +138,5 @@ console.log(deals)
 */
 
 //CODE HERE
+deals.replace("March","April")
+deals.trim()
