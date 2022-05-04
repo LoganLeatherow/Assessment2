@@ -30,7 +30,14 @@
 */
 
 //CODE HERE
+class Ticket{
+    constructor(items, orderTime, customerId){
 
+    }
+    status(x){
+        return x - this.
+    }
+}
 
 
 /*
