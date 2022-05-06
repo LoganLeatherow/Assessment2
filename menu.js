@@ -70,7 +70,7 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-let {price} = pizza
+let {price} = pizza;
 console.log (price)
 /*
     Fourth, and last, destructure the category
@@ -80,7 +80,7 @@ console.log (price)
 */
 
 //CODE HERE
-let {category} = pizza
+let { price, category } = pizza;
 console.log (category)
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -154,6 +154,9 @@ const filteredFood = foodArr.filter(tagFilter => {
     return tagFilter.tags.includes("Share")
 })
 console.log(filteredFood)
+
+
+
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -194,9 +197,18 @@ console.log(filteredFood)
 */
 
 //CODE HERE
-function filterByProperty() {
-    
+const filterByProperty = (property, number, type) => {
+    const filteredArr = foodArr.filter((pizza)=>{
+        if(type.toLowerCase()==="above"){
+            return pizza[property]>number;
+        } else if (type.toLowerCase()==="below"){
+            return pizza[property] < number;
+        }
+    })
+    return filteredArr
 }
+    
+
 
 /*
     Invoke the `filterByProperty` function passing
@@ -206,3 +218,4 @@ function filterByProperty() {
 */
 
 //CODE HERE
+console.log(filterByProperty ("price", 10, "below"))

@@ -123,7 +123,8 @@ console.log(canWeDeliverTwo(85205))
 */
 
 //CODE HERE
-deals.replace(/\d+/,"10");
+deals[0].title-deals[0].title.replace("5","0")
+// deals.replace(/\d+/,"10");
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -138,5 +139,7 @@ deals.replace(/\d+/,"10");
 */
 
 //CODE HERE
-deals.replace("March","April")
-deals.trim()
+
+deals[1].desc=deals[1].desc.replace("March","April").trim();
+// deals.replace("March","April")
+// deals.trim()
