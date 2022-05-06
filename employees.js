@@ -20,7 +20,15 @@
 */
 
 //CODE HERE
-
+class Employee{
+    constructor(name, shifts){
+        this.name=name;
+        this.shifts=shifts;
+    }
+    getSchedule(){
+        console.log(`${this.name} works on ${this.shifts}`)
+    }
+}
 
 
 /*
@@ -34,6 +42,7 @@
 */
 
 //CODE HERE
+const employeeOne = new Employee("Jess", ["weekday mornings", " weekday afternoons"])
 
 /*
     Call the `getSchedule` method on the
@@ -41,8 +50,7 @@
 */
 
 //CODE HERE
-
-
+employeeOne.getSchedule()
 /*
     Make a copy of the empOne object
     using the spread operator.
@@ -56,8 +64,9 @@
 */
 
 //CODE HERE
-
-
+const employeeTwo = { ...employeeOne, name:"Nick"}
+console.log(employeeOne)
+console.log(employeeTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -83,7 +92,18 @@
 */
 
 //CODE HERE
-
+class Manager extends Employee {
+    constructor (name, shifts, employees){
+        super(name, shifts);
+        this.employees=employees;
+    }
+    getEmployees(){
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployee(employee){
+        this.employees.push(employee)
+    }
+}
 
 
 /*
@@ -98,7 +118,7 @@
 */
 
 //CODE HERE
-
+const logan = new Manager("Logan", ["morning"], ["kegan"], ["night"])
 
 /*
     Call the `getEmployees` method on the
@@ -106,6 +126,7 @@
 */
 
 //CODE HERE
+logan.getEmployees();
 
 /*
     Call the `addEmployee` method on the 
@@ -114,6 +135,7 @@
 */
 
 //CODE HERE 
+logan.addEmployee("Fred");
 
 /*
     Call the `getEmployees` method on the
@@ -122,3 +144,4 @@
 */
 
 //CODE HERE
+logan.getEmployees()
