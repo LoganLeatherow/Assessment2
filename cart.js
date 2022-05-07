@@ -111,7 +111,7 @@ const calcFinalPrice = (clearTotal, couponValue, tax) =>{
 
 /*
     TEXT ANSWER HERE
-
+customer object = name(string), phone number(number), email(string), repeat customer(boolean)
 */
 
 /*
@@ -120,3 +120,9 @@ const calcFinalPrice = (clearTotal, couponValue, tax) =>{
 */
 
 //CODE HERE
+let customer ={
+    name:"Todd Rawburger",
+    phoneNumber: 8016273434,
+    email:"RawburgerTodd@gmail",
+    repeatCustomer:true,
+}
